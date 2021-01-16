@@ -1,0 +1,14 @@
+.img-title{
+    display: flex;
+    
+}
+.img-title img{
+    height: 50px;
+    width: 50px;
+    padding-right: 5px;
+}
+.feed-box{
+    margin-left: 60px;
+    padding: 10px;
+    border: 1px solid gray;
+}

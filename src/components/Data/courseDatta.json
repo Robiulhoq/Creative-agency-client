@@ -1,0 +1,16 @@
+[{
+    "img": "https://res.cloudinary.com/dv8sz8mml/image/upload/v1610119997/agancy/service2_nfqop8.png",
+    "title": "Graphie design",
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered",
+    "key": "4361160759"
+  }, {
+    "img": "https://res.cloudinary.com/dv8sz8mml/image/upload/v1610119997/agancy/service3_pecbek.png",
+    "title": "Mobile app design ",
+    "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered",
+    "key": "5024801733"
+  }, {
+    "img": "https://res.cloudinary.com/dv8sz8mml/image/upload/v1610119983/agancy/service1_judsmh.png",
+    "title": "Web development",
+    "description": "There are many variations of passages of Lorem Ipsum  available, but the majority have suffered",
+    "key": "8429537880"
+  }]
