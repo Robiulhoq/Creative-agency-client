@@ -1,0 +1,16 @@
+/* .details{
+    width: 23%;
+    
+
+} */
+td{
+    width: 25%;
+    text-align: center;
+}
+.item{
+    background-color: black;
+    
+}
+.single-item{
+    background-color: white;
+}

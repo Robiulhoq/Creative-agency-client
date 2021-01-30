@@ -5,8 +5,8 @@ import HomeNav from '../HomeNav/HomeNav';
 import Company from '../Company/Company';
 import Service from '../Service/Service';
 import OurWork from '../OurWork/OurWork';
-import FeedBack from '../FeedBack/FeedBack';
 import Contact from '../Contact/Contact';
+import ClientFeedBack from '../ClientFeedBack/ClientFeedBack';
 
 
 const Home = () => {
@@ -19,7 +19,8 @@ const Home = () => {
             <Company></Company>
             <Service></Service>
             <OurWork></OurWork>
-            <FeedBack></FeedBack>
+            {/* <FeedBack></FeedBack> */}
+            <ClientFeedBack></ClientFeedBack>
             <Contact></Contact>
         </div>
     );

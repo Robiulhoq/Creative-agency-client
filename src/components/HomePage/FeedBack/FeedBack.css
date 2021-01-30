@@ -1,5 +1,6 @@
 .img-title{
     display: flex;
+    width: 100%;
     
 }
 .img-title img{
@@ -11,4 +12,14 @@
     margin-left: 60px;
     padding: 10px;
     border: 1px solid gray;
+    width: 80%;
 }
+.review-box{
+    display: inline-block;
+    height: auto;
+    width: 33%;
+}
+/* .review{
+    display: inline-block;
+    width: 40%;
+} */

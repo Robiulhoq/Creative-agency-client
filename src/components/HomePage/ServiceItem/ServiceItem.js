@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ServiceItem.css';
 
 const ServiceItem = (props) => {
-    const { img, title, description } = props.service;
+    const { img, name, description } = props.service;
     return (
         <Link style={{color: 'black'}} to="/odder">
         <div className="row service-box">
@@ -13,9 +13,9 @@ const ServiceItem = (props) => {
                     <img src={img} alt="" />
                 </div>
                 <div className="content-box">
-                    <h5>{title}</h5>
+                    <h5>{name}</h5>
                     <small>{description}</small>
-                    
+                    <button className="btn btn-primary odder">Odder Now</button>
                 </div>
             </div>
             

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Login.css';
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -17,7 +17,8 @@ const Login = () => {
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
-    const [newLogin, setNewLogin] = useContext(UserContext)
+    // let { privatedAdmin } =  { from: { pathname: "/" } };
+    const [newLogin, setNewLogin] = useContext(UserContext);
     
     const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -27,20 +28,23 @@ const Login = () => {
             .then((result) => {
                 var credential = result.credential;
                 var token = credential.accessToken;
-                console.log(token);
+                sessionStorage.setItem('token', token)
+                
                 var user = result.user;
                 console.log(user);
-                history.replace(from);
+                
                 if (user) {
-                    alert("login success")
+                    
+                    
                     const { displayName, email } = user;
                     const newUser = {
                         user: displayName,
                         email: email
                     }
                    setNewLogin(newUser);
-                    
+                   history.replace(from)
                 }
+               
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;
@@ -53,6 +57,9 @@ const Login = () => {
                 // ...
             });
     }
+    
+
+
     return (
         <div className="container">
             <h3>{newLogin.user}</h3>

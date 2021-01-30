@@ -1,0 +1,12 @@
+.odder-item{
+  background-color: white;
+  margin: 15px;
+  display: inline-block;
+  width: 33%;
+  height: 200px;
+  border-radius: 15px;
+  
+}
+.odder{
+    width: 100%;
+}

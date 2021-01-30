@@ -1,0 +1,8 @@
+.service-container{
+    width: 100%;
+}
+.addService{
+    background-color: lightgray;
+    
+    padding: 30px;
+}

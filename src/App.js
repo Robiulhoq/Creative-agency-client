@@ -12,6 +12,11 @@ import ServiceLIst from './components/OdderPage/Odder/ServiceList/ServiceLIst';
 import ClientReview from './components/OdderPage/Odder/ClientReview/ClientReview';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Admin from './components/AdminPages/Admin/Admin';
+import OdderList from './components/AdminPages/OdderList/OdderList';
+import MakeAdmin from './components/AdminPages/MakeAdmin/MakeAdmin';
+import AddService from './components/AdminPages/AddService/AddService';
 
 
 export const UserContext = createContext();
@@ -30,20 +35,33 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/odder">
+          {/* <Route path="/odder">
           <Odder></Odder>
-          </Route>
-          
-
-          <Route path="/service">
+          </Route> */}
+          <PrivateRoute path="/odder">
+            <Odder></Odder>
+          </PrivateRoute>
+          {/* <PrivateRoute path="/service">
             <ServiceLIst></ServiceLIst>
-          </Route>
-          <Route path="/review">
+          </PrivateRoute> */}
+          <PrivateRoute path="/service">
+            <ServiceLIst></ServiceLIst>
+          </PrivateRoute>
+          <PrivateRoute path="/review">
             <ClientReview></ClientReview>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
+          <PrivateRoute path="/odderList">
+            <OdderList></OdderList>
+          </PrivateRoute>
+          <PrivateRoute path="/MakeAdmin">
+            <MakeAdmin></MakeAdmin>
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
+            <AddService></AddService>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

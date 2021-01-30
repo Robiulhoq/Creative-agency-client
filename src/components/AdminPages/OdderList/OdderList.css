@@ -1,0 +1,17 @@
+.main-container{
+    width: 100%;
+    height: 100%;
+}
+.clientOdder{
+    background-color: #F5F6FA;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+   
+    
+}
+th{
+    width: 100%;
+    text-align: center;
+}
+

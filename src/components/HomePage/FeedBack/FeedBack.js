@@ -1,22 +1,19 @@
 import React from 'react';
 import './FeedBack.css';
-import customer1 from "../../../images/customer-1.png";
-import customer2 from "../../../images/customer-2.png";
-import customer3 from "../../../images/customer-3.png";
 
-const FeedBack = () => {
+const FeedBack = (props) => {
+    const {name, companyName, img, review} = props.feedback;
     return (
-        <div className="container">
-            <h2 className="text-center mt-5 mb-5">Clients <span className="text-success ">FeedBack</span></h2>
-            <div className="row mb-5">
-                <div className="col-md-3 feed-box">
+        <div className="container review-box">
+            <div className="row mb-5 review">
+                <div className="col-md-3 col-sm-12 feed-box">
                     <div className="img-title">
-                        <img className="img-fluid" src={customer1} alt="" />
-                        <h6>Nasa  partik <br/>CEO</h6>
+                        <img className="img-fluid" src={img} alt="" />
+                        <h6>{name} <br/>{companyName}</h6>
                     </div>
-                   <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, voluptatem?</small>
+                   <small>{review}</small>
                 </div>
-                <div className="col-md-3 feed-box">
+                {/* <div className="col-md-3 feed-box">
                     <div className="img-title">
                         <img src={customer2} alt="" />
                         <h6>Maream borron <br/>CEO </h6>
@@ -29,7 +26,7 @@ const FeedBack = () => {
                         <h6>Bria Malone <br/> CEO</h6>
                     </div>
                     <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, voluptatem!</small>
-                </div>
+                </div> */}
             </div>
         </div>
     );
